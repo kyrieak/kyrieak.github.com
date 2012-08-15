@@ -1,0 +1,119 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css" >
+<script type="text/javascript">
+
+var me_on = true;
+var social_on = false;
+var read_on = false;
+var file;
+var file_length;
+var content;
+
+var me_text = "<p>Hi, my name is Kyrie, pronounced 'key'+'ree'+'ae'. I like coffee, pancakes, and learning new things,\
+					which is why I decided on a career change from Architecture to Web Development. I had studied Architecture\
+					at UC Berkeley throughout my undergrad, and while I had learned a lot about architectural design and 3D modeling,\
+					by the end of my four years I was wanting to switch gears and learn something new. After college I interned at an\
+					architecture firm in Berkeley while trying to learn programming on my own. After my internship I had a great\
+					experience volunteering for several months with a group called Pioneers in Engineering (PiE), which mentors high school\
+					students and hosts a Robotics Competition where teams will get to compete with their robots. Having studied\
+					programming on my own for almost a year, I am ready for a chance to start my career in Web Development, and\
+					am looking forward to joining everyone in Dev Bootcamp this fall.</p>";
+var social_text = "<p>Here are the links to some of my online profiles. </p>\
+					<p><a href='http://www.tumblr.com/blog/swkyr'><b>Tumblr</b></a></p> \
+					<p><a href='http://www.linkedin.com/pub/kyrie-kopczynski/30/b75/711'><b>LinkedIn</b></a></p> \
+					<p><a href='http://www.quora.com/Kyrie-Kopczynski'><b>Quora</b></a></p> \
+					<p><a href='https://twitter.com/swkyr'><b>Twitter</b></a></p>";
+var read_text = "<p>Here are some articles that I've read recently. </p>\
+					<p><a href='http://www.slate.com/articles/business/the_dismal_science/2012/08/tripadvisor_\
+						expedia_yelp_amazon_are_online_reviews_trustworthy_economists_weigh_in_.html'><b>Slate: </b> \
+						<i>Should You Trust Online Reviews?</i></a> \
+					</p> \
+					<p><a href='http://www.npr.org/blogs/health/2012/08/03/158084115/more-cases-of-new-swine-flu-virus- \
+						appear-in-three-states?sc=17&f=1001'><b>NPR: </b><i>More Cases Of New Swine Flu Virus Appear In \
+						Three States</i></a> \
+					</p> \
+					<p><a href='http://www.bbc.co.uk/news/uk-19050139#TWEET180535'><b>BBC News: </b><i>Your Olympic \
+						athlete body match</i></a>\
+					</p> \
+					<p><a href='http://www.slate.com/blogs/browbeat/2012/07/30/tom_waits_interview_may_have_been_the_\
+						inspiration_for_heath_ledger_s_joker_.html'><b>Slate: </b><i>Was Heath Ledger's Joker Inspired \
+						by Tom Waits?</i></a>\
+					</p>";
+
+function switch_button(idname){
+	if(me_on)
+	{
+		document.getElementById("button_me").style.backgroundImage = "url(icon-me.png)";
+		me_on = false;
+	}
+	else if (social_on)
+	{
+		document.getElementById("button_social").style.backgroundImage = "url(icon-social.png)";
+		social_on = false;
+	}
+	else
+	{
+		document.getElementById("button_read").style.backgroundImage = "url(icon-read.png)";
+		read_on = false;
+	}
+	
+	switch (idname)
+	{
+		case "button_me":
+			document.getElementById("button_me").style.backgroundImage = "url(icon-me-on.png)";
+			document.getElementById("mytext").innerHTML = me_text;
+			document.getElementById("myheader").innerHTML = "About Me";
+			me_on = true;
+			break;
+		case "button_social":
+			document.getElementById("button_social").style.backgroundImage = "url(icon-social-on.png)";
+			document.getElementById("mytext").innerHTML = social_text;
+			document.getElementById("myheader").innerHTML = "Links to my Social Network Profiles";
+			social_on = true;
+			break;
+		case "button_read":
+			document.getElementById("button_read").style.backgroundImage = "url(icon-read-on.png)";
+			document.getElementById("mytext").innerHTML = read_text;
+			document.getElementById("myheader").innerHTML = "Articles I've Read";
+			read_on = true;
+			break;
+	}
+}
+
+</script>
+</head>
+
+<body>
+<h1 class="shadow">
+	Kyrie's Profile
+</h1>
+
+<h5 id="label_me">About me</h5>
+<h5 id="label_social">Social Links</h5>
+<h5 id="label_read">Articles Read</h5>
+
+<div>
+<div id=leftpane class="shadow">
+	<div class="button" id="button_me" onClick="switch_button('button_me');">
+	</div>
+	<div class="button" id="button_social" onClick="switch_button('button_social');">
+	</div>
+	<div class="button" id="button_read" onClick="switch_button('button_read');">
+	</div>
+</div>
+
+<div id=content>
+	<h3 class="shadow" id="myheader">
+		About me
+	</h3>
+	<div class="aboutme shadow" id="mytext">
+		Hello this is filler.
+	</div>
+</div>
+</div>
+
+</body>
+<script> document.getElementById("mytext").innerHTML = me_text;</script>
+<!-- version 1 -- >
+</html>

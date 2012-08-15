@@ -1,0 +1,101 @@
+html{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+	color: rgb(50,25,0);
+}
+
+h1{
+	background-color: rgba(255,255,255,0.75);
+	display: block;
+	margin-left: 600px;
+	width: 400px;
+}
+h3{
+	background-color: rgb(205,255,100);
+	display: block;
+	width: 700px;
+	margin-top: 0px;
+	padding-left: 8px;
+}
+
+h5{
+	position: absolute;
+	color: white;
+	text-shadow: 2px 2px 4px rgb(105,105,105);
+}
+
+body{
+	background: url("profile-bgimg.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p{
+	font-size: 18px;
+}
+
+.shadow{
+	-moz-box-shadow:    2px 2px 2px 2px rgb(105,105,105);
+  	-webkit-box-shadow: 2px 2px 2px 2px rgb(105,105,105);
+  	box-shadow:         2px 2px 2px 2px rgb(105,105,105);
+}
+
+.aboutme{
+	width: 700px;
+	height: 500px;
+	background-color: rgba(255,255,255,0.75);
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 1px;
+}
+
+.button{
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+}
+
+#button_me{
+	background-image: url("icon-me-on.png");
+}
+
+#button_read{
+	background-image: url("icon-read.png");
+}
+
+#button_social{
+	background-image: url("icon-social.png");
+}
+
+#label_me{
+	top: 135px;
+	left: 22px;
+}
+#label_social{
+	top: 235px;
+	left: 16px;
+}
+#label_read{
+	top: 335px;
+	left: 11px;
+}
+
+#leftpane{
+	width: 100px;
+	height: 300px;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: white;
+}
+
+#content{
+	width: 800px;
+	vertical-align: top;
+	display: inline-block;
+	position: absolute;
+	margin-left: 10px;
+	padding-top: 0px;
+}
